@@ -48,8 +48,8 @@ if uploaded_files:
     for uploaded_file in uploaded_files:
         processed_file = process_file(uploaded_file)
         st.download_button(
-            label=f"Download modified {uploaded_file.name.replace('.xlsx', '_GIFT.xlsx')}",
+            label=f"Download modified {uploaded_file.name}",
             data=processed_file,
-            file_name=uploaded_file.name.replace(".xlsx", "_GIFT.xlsx"),
+            file_name=uploaded_file.name,
             mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
         )
